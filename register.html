@@ -3,27 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Google Form Integration</title>
+    <title>AI Workshop Registration</title>
     <style>
         body {
             font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f0f0f0;
+        }
+        h1 {
+            color: #2c3e50;
             text-align: center;
+        }
+        .form-container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
         }
         iframe {
             width: 100%;
-            height: 800px;
+            height: 1500px; /* Adjust based on your form length */
             border: none;
         }
     </style>
 </head>
 <body>
-
-    <h2>Register for the AI Workshop</h2>
-
-    <!-- Embed Google Form -->
-    <iframe id="google-form" 
-        src="https://docs.google.com/forms/d/e/1BYv7kTIBhd8wxvg2O7SNoiQ63MfQXMMFub3PA-qwlYU/embeddedform?embedded=true">
-    </iframe>
-
+    <h1>AI Workshop Registration</h1>
+    <div class="form-container">
+        <!-- Replace with your Google Form embed code -->
+        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSf9oy82r3OvKpIPj6hQc9c5rMg6BxDQrzWmFVG9UQzBeiVXdg/viewform?embedded=true" 
+                frameborder="0" 
+                marginheight="0" 
+                marginwidth="0">
+            Loading…
+        </iframe>
+    </div>
 </body>
 </html>
