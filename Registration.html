@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Form Integration</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        iframe {
+            width: 100%;
+            height: 800px;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Register for the AI Workshop</h2>
+
+    <!-- Embed Google Form -->
+    <iframe id="google-form" 
+        src="https://docs.google.com/forms/d/e/1BYv7kTIBhd8wxvg2O7SNoiQ63MfQXMMFub3PA-qwlYU/embeddedform?embedded=true">
+    </iframe>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            let formIframe = document.getElementById("google-form");
+
+            // Monitor iframe URL changes
+            let checkSubmission = setInterval(() => {
+                if (formIframe.contentWindow.location.href.includes("formResponse")) {
+                    clearInterval(checkSubmission);
+                    window.location.href = "thank-you.html"; // Redirect to Thank You page
+                }
+            }, 1000);
+        });
+    </script>
+
+</body>
+</html>
